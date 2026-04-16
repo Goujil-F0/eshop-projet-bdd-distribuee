@@ -1,0 +1,41 @@
+version: '3.8'
+services:
+  db_global:
+    build: .        # <--- Il va lire le Dockerfile dans le dossier courant
+    container_name: db_global
+    environment:
+      - ORACLE_PASSWORD=${ORACLE_PWD}
+    ports:
+      - "1521:1521"
+    volumes:
+      - ./scripts:/container-entrypoint-initdb.d  # <--- Automatisera l'exécution de tes .sql
+    networks:
+      eshop-net:
+
+  db_site1:
+    build: .        # <--- Utilise le même Dockerfile
+    container_name: db_site1
+    environment:
+      - ORACLE_PASSWORD=${ORACLE_PWD}
+    ports:
+      - "1524:1521"
+    volumes:
+      - ./scripts:/container-entrypoint-initdb.d
+    networks:
+      eshop-net:
+
+  db_site2:
+    build: .
+    container_name: db_site2
+    environment:
+      - ORACLE_PASSWORD=${ORACLE_PWD}
+    ports:
+      - "1525:1521"
+    volumes:
+      - ./scripts:/container-entrypoint-initdb.d
+    networks:
+      eshop-net:
+
+networks:
+  eshop-net:
+    driver: bridge

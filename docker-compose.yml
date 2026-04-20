@@ -4,9 +4,9 @@ services:
     build: .        # <--- Il va lire le Dockerfile dans le dossier courant
     container_name: db_global
     environment:
-      - ORACLE_PASSWORD=${ORACLE_PWD}
+      - ORACLE_PASSWORD=Eshop123
     ports:
-      - "1521:1521"
+      - "1523:1521"
     volumes:
       - ./scripts:/container-entrypoint-initdb.d  # <--- Automatisera l'exécution de tes .sql
     networks:

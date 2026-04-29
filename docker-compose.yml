@@ -4,7 +4,7 @@ services:
     build: .        # <--- Il va lire le Dockerfile dans le dossier courant
     container_name: db_global
     environment:
-      - ORACLE_PASSWORD=Eshop123
+      - ORACLE_PASSWORD=${ORACLE_PWD}
     ports:
       - "1523:1521"
     volumes:

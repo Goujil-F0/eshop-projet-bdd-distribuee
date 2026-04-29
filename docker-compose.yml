@@ -6,7 +6,7 @@ services:
     environment:
       - ORACLE_PASSWORD=${ORACLE_PWD}
     ports:
-      - "1521:1521"
+      - "1523:1521"
     volumes:
       - ./scripts:/container-entrypoint-initdb.d  # <--- Automatisera l'exécution de tes .sql
     networks:

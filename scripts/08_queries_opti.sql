@@ -49,20 +49,7 @@ END;
 -- REQUÊTE 1: Nombre de commandes par client en 2020
 -- ============================================
 -- Affiche un titre dans la console
-PROMPT ===== Nombre de commandes par client en 2020 =====
--- Exécute la requête
-SELECT
-    c.idclient,                           -- ID du client
-    c.codeclient,                         -- Code unique du client
-    c.societe,                            -- Raison sociale
-    COUNT(co.idcommande) AS nb_commandes_2020  -- Nombre de commandes en 2020
-FROM clients c
-JOIN commandes co                        -- Jointure avec les commandes
-    ON co.idclient = c.idclient
-WHERE co.datecommande >= DATE '2020-01-01'  -- Filtre: date >= 1er janvier 2020
-  AND co.datecommande < DATE '2021-01-01'   -- Filtre: date < 1er janvier 2021
-GROUP BY c.idclient, c.codeclient, c.societe  -- Groupe par client
-ORDER BY c.idclient;                    -- Trie par ID client
+SELECT * FROM lignecommandes2@site2_link WHERE idlignecommande = 999;                    -- Trie par ID client
 
 EXPLAIN PLAN FOR
 SELECT

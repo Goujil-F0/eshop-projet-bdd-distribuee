@@ -9,7 +9,7 @@ Ce dépôt contient les travaux de conception et d’implémentation d'une infra
 1. INFORMATIONS GÉNÉRALES
    ======================================================================
 
-* Auteurs : GOUJIL Fatiama Ezzahrae & HAIMEUR Nisrine
+* Auteurs : GOUJIL Fatima Ezzahrae & HAIMEUR Nisrine
 * Institution : Université Hassan I, Faculté des Sciences et Techniques, Settat
 * Module : Bases de Données Avancées (Master / Cycle Ingénieur)
 * Encadrant : M. BAHAJ

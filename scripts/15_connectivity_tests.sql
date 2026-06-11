@@ -32,7 +32,6 @@ EXCEPTION
         DBMS_OUTPUT.PUT_LINE('ERROR: Lien site2_link est HORS SERVICE : ' || SQLERRM);
 END;
 /
-
 -- ----------------------------------------------------------
 -- TEST 2 : Depuis le Site 1 vers la base globale
 -- ----------------------------------------------------------
